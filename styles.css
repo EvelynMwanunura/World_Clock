@@ -1,0 +1,67 @@
+body {
+  background: whitesmoke;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  width: 500px;
+  background: rgba(0, 0, 0, 0.2);
+
+  display: block;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+select {
+  width: 90%;
+  padding: 9px;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.city {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px dashed black;
+}
+
+.time {
+  padding-right: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.date {
+  margin-top: -20px;
+  font-size: 0.6em;
+  opacity: 0.9;
+}
+
+.city:last-child {
+  border: none;
+}
+footer {
+  font-size: 0.7em;
+}
+footer a {
+  text-decoration: none;
+  color: blue;
+}
+
+footer a:hover {
+  color: azure;
+  text-decoration: underline;
+}
