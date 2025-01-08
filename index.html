@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Clock</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -18,16 +20,16 @@
       <div class="city">
         <div class="cityandtime">
           <h2>Paris</h2>
-          <p class="date">January 1st 2024</p>
+          <p class="date" id="paris-date">January 1st 2024</p>
         </div>
-        <div class="time">9:40:15 AM</div>
+        <div class="time" id="paris-time">9:40:15 AM</div>
       </div>
       <div class="city">
         <div class="cityandtime">
           <h2>Tokyo</h2>
-          <p class="date">January 1st 2024</p>
+          <p class="date" id="tokyo-date">January 1st 2024</p>
         </div>
-        <div class="time">9:40:15 AM</div>
+        <div class="time" id="tokyo-time">9:40:15 AM</div>
       </div>
     </div>
     <footer>
