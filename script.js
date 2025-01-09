@@ -35,7 +35,9 @@ function updateCity(event) {
             <p class="date">${cityTime.format("MMMM Do YYYY")}</p>
           </div>
           <div class="time">
-          <p class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]")}</p>
+          <p class="time">${cityTime.format(
+            "h:mm:ss "
+          )}<small>${cityTime.format("A")}</small></p>
           </div>
         </div>
         </div>
