@@ -17,3 +17,33 @@ function updateTokyoTime() {
 }
 updateTokyoTime();
 setInterval(updateTokyoTime, 1000);
+
+document.querySelector("#city-dropdown").addEventListener("change", updateCity);
+
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  if (cityTimeZone) {
+    let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+    let citiesElement = document.querySelector("#cities");
+
+    function updateCityTime() {
+      let cityTime = moment().tz(cityTimeZone);
+      citiesElement.innerHTML = `
+        <div class="cities">
+         <div class="city"> <div class="cityandtime">
+            <h2>${cityName}</h2>
+            <p class="date">${cityTime.format("MMMM Do YYYY")}</p>
+          </div>
+          <div class="time">
+          <p class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]")}</p>
+          </div>
+        </div>
+        </div>
+      `;
+    }
+
+    updateCityTime();
+    clearInterval(window.cityInterval);
+    window.cityInterval = setInterval(updateCityTime, 1000);
+  }
+}
