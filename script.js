@@ -18,6 +18,30 @@ function updateTokyoTime() {
 updateTokyoTime();
 setInterval(updateTokyoTime, 1000);
 
+function updateDublinTime() {
+  let dublinDateElement = document.getElementById("dublin-date");
+  let dublinTimeElement = document.getElementById("dublin-time");
+  let dublinTime = moment().tz("Europe/Dublin");
+  dublinDateElement.innerHTML = dublinTime.format("MMMM Do YYYY");
+  dublinTimeElement.innerHTML = dublinTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+}
+updateDublinTime();
+setInterval(updateDublinTime, 1000);
+
+function updateNairobiTime() {
+  let nairobiDateElement = document.getElementById("nairobi-date");
+  let nairobiTimeElement = document.getElementById("nairobi-time");
+  let nairobiTime = moment().tz("Africa/Nairobi");
+  nairobiDateElement.innerHTML = nairobiTime.format("MMMM Do YYYY");
+  nairobiTimeElement.innerHTML = nairobiTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+}
+updateNairobiTime();
+setInterval(updateNairobiTime, 1000);
+
 document.querySelector("#city-dropdown").addEventListener("change", updateCity);
 
 function updateCity(event) {
