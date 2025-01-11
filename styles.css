@@ -57,6 +57,19 @@ select {
 .city:last-child {
   border: none;
 }
+
+.all-cities-link {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: blue;
+}
+
+.all-cities-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 footer {
   font-size: 0.7em;
 }
