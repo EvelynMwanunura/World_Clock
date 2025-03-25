@@ -10,8 +10,8 @@ body {
 }
 
 .container {
-  width: 500px;
-
+  width: 400px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   background: radial-gradient(circle, lightblue, white);
   display: block;
   text-align: center;
